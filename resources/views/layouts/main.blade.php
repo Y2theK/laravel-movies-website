@@ -14,7 +14,7 @@
         <div class="container mx-auto flex flex-col md:flex-row  justify-between items-center py-6 px-4">
             <ul class="flex items-center flex-col md:flex-row">
                 <li>
-                    <a href="#" class="flex items-center">
+                    <a href="{{ route('movies.index') }}" class="flex items-center">
                         <svg class="w-6 h-6 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -25,7 +25,7 @@
                     </a>
                 </li>
                 <li class="md:ml-16 mt-3 md:mt-0">
-                    <a href="#" class="hover:text-gray-300">Movies</a>
+                    <a href="{{ route('movies.index')  }}" class="hover:text-gray-300">Movies</a>
                 </li>
                 <li class="md:ml-6 mt-3 md:mt-0">
                     <a href="#" class="hover:text-gray-300">TV Shows</a>

@@ -38,7 +38,7 @@
             @endauth
         </div>
         @endif
-        <div class="text-red-500">
+        <div class="text-orange-500 uppercase bg-slate-500">
             laravel
         </div>
         {{--
