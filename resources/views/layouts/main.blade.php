@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movie App</title>
+    <livewire:styles>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 
@@ -36,18 +37,8 @@
 
             </ul>
             <div class="flex items-center ">
-                <div class="relative mt-3 md:mt-0">
-                    <input type="text" name=""
-                        class="bg-gray-800 rounded-full w-64 px-4 py-1 pl-8 text-sm focus:outline-none focus:shadow-outline"
-                        id="" placeholder="Search...">
-                    <div class="absolute top-0">
-                        <svg class=" w-4 mt-2 ml-2 fill-current text-gray-500" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </div>
-                </div>
+                <livewire:search-dropdown>
+               {{-- <@livewire('seach-dropdown', ['user' => $user], key($user->id)) --}}
                 <div class="ml-4">
                     <a href="">
                         <img src="{{ asset('images/superhero.png') }}" alt="avatar" class="rounded-full w-8 h-8">
@@ -58,5 +49,5 @@
     </nav>
     @yield('content')
 </body>
-
+@livewireScripts
 </html>
