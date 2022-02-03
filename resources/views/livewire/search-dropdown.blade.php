@@ -1,17 +1,19 @@
-<div class="relative mt-3 md:mt-0">
+<div class="relative mt-3 md:mt-0" x-data="{isOpen : true}" @click.away="isOpen = false">
     <input type="text" name=""
         class="bg-gray-800 rounded-full w-64 px-4 py-1 pl-8 text-sm focus:outline-none focus:shadow-outline"
-        id="" placeholder="Search..." wire:model.debounce.500ms="search">
-    <div class="absolute top-0">
+        id="" placeholder="Search....." wire:model.debounce.500ms="search">
+    <div class="absolute top-0"> 
         <svg class=" w-4 mt-2 ml-2 fill-current text-gray-500" stroke="currentColor" viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
         </svg>
     </div>
+  
+    
     <div wire:loading  class="spinner top-0 right-0 mr-4 mt-3"></div>
     @if (strlen($search) > 2)
-    <div class="absoute text-sm bg-gray-800 rounded w-64 mt-4">
+    <div class="absoute text-sm bg-gray-800 rounded w-64 mt-4" x-show="isOpen">
         <ul>
             @if ($searchResults->count() > 0)
             @foreach ($searchResults as $result)

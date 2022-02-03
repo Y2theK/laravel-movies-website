@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movie App</title>
     <livewire:styles>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        {{-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> --}}
+
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 
 <body class="font-sans bg-gray-900 text-white">
@@ -22,7 +24,9 @@
                                 d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z">
                             </path>
                         </svg>
+
                         <span class="ml-2">Moviepedia</span>
+                        {{-- <h1 x-text="Hello"></h1> --}}
                     </a>
                 </li>
                 <li class="md:ml-16 mt-3 md:mt-0">
@@ -38,16 +42,19 @@
             </ul>
             <div class="flex items-center ">
                 <livewire:search-dropdown>
-               {{-- <@livewire('seach-dropdown', ['user' => $user], key($user->id)) --}}
-                <div class="ml-4">
-                    <a href="">
-                        <img src="{{ asset('images/superhero.png') }}" alt="avatar" class="rounded-full w-8 h-8">
-                    </a>
-                </div>
+                    {{-- <@livewire('seach-dropdown', ['user'=> $user], key($user->id)) --}}
+                        <div class="ml-4">
+                            <a href="">
+                                <img src="{{ asset('images/superhero.png') }}" alt="avatar"
+                                    class="rounded-full w-8 h-8">
+                            </a>
+                        </div>
             </div>
         </div>
     </nav>
     @yield('content')
 </body>
+
 @livewireScripts
+
 </html>

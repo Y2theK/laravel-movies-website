@@ -41,7 +41,7 @@ class MoviesController extends Controller
         });
 
         // $genres = collect($genresArray);
-        dump($genresArray);
+        // dump($genresArray);
         return view('index', compact('popularMovies', 'nowPlayingMovies', 'genres'));
     }
 
